@@ -80,7 +80,7 @@ def replace_middle_letter(word):
     options = [",", ";", ":", "?"]
     # Randomly select one of the strings
     selected_string = random.choice(options)
-    return  before_middle + selected_string + middle_letter + after_middle 
+    return  before_middle + selected_string + middle_letter + selected_string + after_middle 
 
 # Replace middle letter in column_A with Arabic equivalents
 # df['column_b'] = df['column_A'].apply(lambda word: replace_middle_letter(word))
