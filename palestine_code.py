@@ -95,6 +95,10 @@ modified_words = [replace_middle_letter(word) if word in df['column_A'].values e
 modified_text = " ".join(modified_words)
 
 file_path = "output.txt"
+
+# Add RTL markers or use HTML for RTL direction
+rtl_text = "\u202E" + modified_text + "\u202C"
+
 # Open the file in write mode and write the string to it
 with open(file_path, "w", encoding="utf-8") as file:
-    file.write(modified_text)
+    file.write(rtl_text)
