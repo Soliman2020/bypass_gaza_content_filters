@@ -1,5 +1,7 @@
 import pandas as pd
 import re
+import random
+
 
 df = pd.read_csv('keywords.csv')
 
@@ -75,8 +77,10 @@ def replace_middle_letter(word):
         middle_letter = mapping[word[middle_index]]
     else:
         middle_letter = word[middle_index]
-
-    return  before_middle + "," + middle_letter + ',' + after_middle 
+    options = [",", ";", ":", "?"]
+    # Randomly select one of the strings
+    selected_string = random.choice(options)
+    return  before_middle + selected_string + middle_letter + after_middle 
 
 # Replace middle letter in column_A with Arabic equivalents
 # df['column_b'] = df['column_A'].apply(lambda word: replace_middle_letter(word))
