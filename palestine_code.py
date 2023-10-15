@@ -76,7 +76,7 @@ def replace_middle_letter(word):
     else:
         middle_letter = word[middle_index]
 
-    return  before_middle + "" + middle_letter + '.' + after_middle 
+    return  before_middle + "," + middle_letter + ',' + after_middle 
 
 # Replace middle letter in column_A with Arabic equivalents
 # df['column_b'] = df['column_A'].apply(lambda word: replace_middle_letter(word))
